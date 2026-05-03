@@ -1,3 +1,18 @@
+"""
+Google Sheets to HTML Email Automator
+Author: Joseph Norman
+
+This script automates the process of fetching scout payment data from Google Sheets,
+converting specific spreadsheet ranges into styled HTML tables, and sending 
+personalized email notifications via Gmail SMTP. 
+
+Key Features:
+- Google Sheets API integration for real-time data retrieval.
+- Dynamic HTML generation with CSS styling preserved from the spreadsheet.
+- Secure credential management using environment variables.
+"""
+
+
 import os
 import socket
 import smtplib
@@ -10,7 +25,7 @@ from google.oauth2 import service_account
 # --- CONFIGURATION (Use Environment Variables for Security) ---
 MY_EMAIL = os.environ.get("EMAIL_USER", "your-email@gmail.com")
 MY_PASSWORD = os.environ.get("EMAIL_PASS", "")  # Use Google App Password
-SPREADSHEET_NAME = "2026 Scout Payments"
+SPREADSHEET_NAME = "" 
 WORKSHEET_NAME = "Data"  # Ensure this matches your tab name
 SPREADSHEET_ID = ""      # Add your ID here
 RANGE_NAME = "A1:E10"    # Add your range here

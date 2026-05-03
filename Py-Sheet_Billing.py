@@ -1,4 +1,4 @@
-# pip install google-api-python-client
+pip install google-api-python-client
 
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
@@ -250,7 +250,7 @@ import smtplib
 import socket
 
 MY_EMAIL = "" # myemail.gmail.com
-MY_PASSWORD = "" # 2 factor auth password
+MY_PASSWORD = "" # Google App Password
 WORKSHEET_NAME = ""
 
 # Define SPREADSHEET_ID and RANGE_NAME globally for get_cell_html
